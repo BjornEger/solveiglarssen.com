@@ -1,0 +1,129 @@
+:root{
+  --bg:#0b0f14;
+  --card:#111826;
+  --text:#e9eef5;
+  --muted:#b6c2d0;
+  --accent:#5ad0ff;
+  --accent2:#7CFFB2;
+  --border:rgba(255,255,255,.12);
+  --shadow: 0 16px 40px rgba(0,0,0,.35);
+  --max: 980px;
+  --radius:18px;
+  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:var(--font);
+  background: radial-gradient(1200px 700px at 20% 10%, rgba(90,208,255,.22), transparent 60%),
+              radial-gradient(900px 600px at 80% 0%, rgba(124,255,178,.18), transparent 55%),
+              var(--bg);
+  color:var(--text);
+}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:var(--max); margin:0 auto; padding:28px 18px}
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:16px; padding:14px 18px; border:1px solid var(--border);
+  border-radius:var(--radius); background:rgba(17,24,38,.70); backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+}
+.brand{display:flex; flex-direction:column; gap:2px}
+.brand b{font-size:1.05rem; letter-spacing:.2px}
+.brand span{font-size:.92rem; color:var(--muted)}
+.navlinks{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+.navlinks a{padding:8px 10px; border-radius:12px}
+.navlinks a.active, .navlinks a:hover{background:rgba(255,255,255,.06); text-decoration:none}
+.hero{
+  margin-top:22px;
+  padding:34px 22px;
+  border:1px solid var(--border);
+  border-radius:calc(var(--radius) + 6px);
+  background: linear-gradient(180deg, rgba(17,24,38,.82), rgba(17,24,38,.62));
+  box-shadow: var(--shadow);
+}
+.hero h1{margin:0 0 10px; font-size:2.1rem; line-height:1.15}
+.badge{
+  display:inline-flex; gap:8px; align-items:center;
+  font-size:.92rem; color:var(--muted);
+  border:1px solid var(--border); padding:8px 12px; border-radius:999px;
+  background:rgba(255,255,255,.04);
+}
+.grid{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap:18px;
+}
+@media (max-width: 900px){
+  .grid{grid-template-columns: 1fr}
+}
+.card{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  background:rgba(17,24,38,.60);
+  box-shadow: var(--shadow);
+  padding:18px;
+}
+.card h2{margin:0 0 10px; font-size:1.25rem}
+.card p{margin:0 0 12px; color:var(--text); opacity:.95; line-height:1.65}
+.muted{color:var(--muted)}
+.cta-row{display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 6px}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:11px 14px; border-radius:14px; border:1px solid var(--border);
+  background:rgba(255,255,255,.05); color:var(--text);
+  text-decoration:none; font-weight:600;
+}
+.btn:hover{background:rgba(255,255,255,.09); text-decoration:none}
+.btn.primary{border-color:rgba(90,208,255,.5); background:rgba(90,208,255,.10)}
+.btn.primary:hover{background:rgba(90,208,255,.16)}
+.btn.success{border-color:rgba(124,255,178,.5); background:rgba(124,255,178,.10)}
+.btn.success:hover{background:rgba(124,255,178,.16)}
+.quote{
+  margin:12px 0;
+  padding:14px 14px 12px;
+  border-left:4px solid rgba(90,208,255,.6);
+  background:rgba(255,255,255,.04);
+  border-radius:14px;
+}
+.quote p{margin:0 0 6px}
+.quote .by{font-size:.92rem; color:var(--muted)}
+.footer{
+  margin:26px 0 10px;
+  color:var(--muted);
+  font-size:.92rem;
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+  opacity:.9;
+}
+.smallprint{font-size:.92rem; color:var(--muted); line-height:1.55}
+hr.sep{border:0; border-top:1px solid var(--border); margin:14px 0}
+
+/* Cover-first hero */
+.hero-split{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:18px;
+  align-items:center;
+}
+@media (max-width: 900px){
+  .hero-split{grid-template-columns:1fr}
+}
+.cover{
+  width:100%;
+  height:auto;
+  border-radius:18px;
+  border:1px solid var(--border);
+  box-shadow: var(--shadow);
+  background:#000;
+}
+.illus{
+  width:100%;
+  height:auto;
+  border-radius:16px;
+  border:1px solid var(--border);
+  margin:12px 0;
+  box-shadow: var(--shadow);
+  background:#000;
+}
